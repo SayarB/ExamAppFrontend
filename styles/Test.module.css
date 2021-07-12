@@ -1,0 +1,40 @@
+
+.questionCard
+{
+    width: min(80%,1000px);
+    margin:  20px auto;
+padding: 20px;
+    background-color: rgb(235, 233, 132);
+    box-shadow: -2px 5px 10px 1px rgb(250, 252, 150);
+}
+.options_div
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-direction: column;
+    width: 100%;
+}
+.option{
+    text-align: center;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: rgb(6, 22, 68);
+}
+.option:hover
+{
+    background-color: rgb(168, 168, 204);
+}
+.selected:hover
+{
+    background-color: rgb(85, 243, 36);
+}
+.submitButton
+{
+    margin: auto;
+}
+.option.selected
+{
+    background-color: rgb(64, 233, 106);
+    color: black;
+}

@@ -1,0 +1,45 @@
+
+.container
+{
+    background: lightblue;
+    width: min(100%, 600px) ;
+    margin: auto;
+    border-radius: 15px;
+    border: black 1px solid;
+    padding:10px 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    box-shadow:5px 5px 20px 1px rgb(198, 237, 252) ;
+}
+.important_span
+{
+    color: rgb(126, 185, 37);
+    text-shadow: greenyellow;
+    font-weight: bold;
+}
+.header{
+    text-align: center;
+    color:indigo
+}
+.subHeader
+{
+    padding: 0px;
+    width: fit-content;
+    margin-left: 10px;
+}
+.paragraph
+{
+    padding: 0px;
+
+    width: fit-content;
+    margin-left:15px;
+}
+.info_section
+{
+    
+    width:300px;
+    margin: auto;
+}
