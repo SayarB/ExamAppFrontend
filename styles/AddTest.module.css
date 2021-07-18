@@ -1,59 +1,52 @@
-.input_label
-{
-   width: 200px;
+.input_label {
+  width: 200px;
 }
-.input_field
-{
-    border:none;
-    border-bottom: 1px solid black;
-    margin: 20px 20px;
-    
+.input_field {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 20px 20px;
 }
-.long_text_input
-{
-    width: 500px;
+.long_text_input {
+  width: 500px;
 }
-.input_field:focus
-{
-    outline: none;
+.input_field:focus {
+  outline: none;
 }
-.form
-{
-   
-    
-    
-   margin: 50px;
+.form {
+  margin: 50px;
 }
-.question_input
-{
-    margin: 0px 20px;
+.question_input {
+  margin: 0px 20px;
 }
-.question_input>h3{
-    margin: 2px 0px;
+.question_input > h3 {
+  margin: 2px 0px;
 }
-.option_input
-{
-    margin: 0px 20px;
+.option_input {
+  margin: 0px 20px;
 }
-.option_input>h4{
-    margin: 2px 0px;
+.option_input > h4 {
+  margin: 2px 0px;
 }
-.button{
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    margin: 2px;
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 2px;
 }
-.button_red
-{
-    background-color: rgb(243, 85, 85);
-    color: white;
-    
-    
+.button:hover {
+  background-color: hsl(0, 0%, 65%);
 }
-.button_green
-{
-    background-color: rgb(84, 233, 47);
-    color: rgb(0, 0, 0);
-   
+.button_red {
+  background-color: hsl(0, 87%, 64%);
+  color: white;
+}
+.button_red:hover {
+  background-color: hsl(0, 51%, 55%);
+}
+.button_green {
+  background-color: hsl(108, 81%, 55%);
+  color: rgb(0, 0, 0);
+}
+.button_green:hover {
+  background-color: hsl(108, 51%, 55%);
 }
