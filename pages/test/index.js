@@ -1,10 +1,11 @@
+import Link from "next/link";
+import TestThumbnail from "../../components/TestThumbnail";
+import styles from "../../styles/Test.module.css";
 export default function TestList({ exams }) {
   return (
-    <div>
+    <div className={styles.thumbnail_div}>
       {exams?.map((exam, i) => (
-        <a key={"link-" + i} href="http://localhost:3000/test/singlecorrect">
-          <h1>{exam.name}</h1>
-        </a>
+        <TestThumbnail exam={exam} key={"exam-thumbnail" + i} />
       ))}
     </div>
   );

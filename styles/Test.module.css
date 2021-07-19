@@ -1,40 +1,69 @@
-
-.questionCard
-{
-    width: min(80%,1000px);
-    margin:  20px auto;
-padding: 20px;
-    background-color: rgb(235, 233, 132);
-    box-shadow: -2px 5px 10px 1px rgb(250, 252, 150);
+.questionCard {
+  width: min(80%, 1000px);
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(235, 233, 132);
+  box-shadow: -2px 5px 10px 1px rgb(250, 252, 150);
 }
-.options_div
-{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-direction: column;
-    width: 100%;
+.options_div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-direction: column;
+  width: 100%;
 }
-.option{
-    text-align: center;
-    height: 50px;
-    border: none;
-    color: white;
-    background-color: rgb(6, 22, 68);
+.option {
+  text-align: center;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: rgb(6, 22, 68);
 }
-.option:hover
-{
-    background-color: rgb(168, 168, 204);
+.option:hover {
+  background-color: rgb(168, 168, 204);
 }
-.selected:hover
-{
-    background-color: rgb(85, 243, 36);
+.selected:hover {
+  background-color: hsl(106, 90%, 55%);
 }
-.submitButton
-{
-    margin: auto;
+.submitButton {
+  display: block;
+  padding: 10px;
+  background-color: hsl(106, 80%, 65%);
+  border-radius: 10px;
+  border: none;
+  box-shadow: -2px 5px 10px 1px rgb(187, 252, 150);
+  margin: auto;
 }
-.option.selected
-{
-    background-color: rgb(64, 233, 106);
-    color: black;
+.submitButton:hover {
+  box-shadow: -2px 5px 6px 3px rgb(187, 252, 150);
+}
+.option.selected {
+  background-color: rgb(64, 233, 106);
+  color: black;
+}
+.test_thumbnail {
+  background-color: hsl(180, 100%, 80%);
+  flex: 1;
+  min-width: 450px;
+  max-width: 600px;
+  height: 100px;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px hsl(180, 50%, 66%);
+}
+.thumbnail_div {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  justify-content: space-evenly;
+}
+.clearResponse_button {
+  width: fit-content;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  margin: 10px;
 }

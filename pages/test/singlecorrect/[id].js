@@ -1,7 +1,9 @@
 import { useState } from "react";
-import QuestionCard from "../../components/QuestionCard";
-import ReportCard from "../../components/ReportCard";
-import styles from "../../styles/Test.module.css";
+import QuestionCard from "../../../components/QuestionCard";
+import ReportCard from "../../../components/ReportCard";
+import styles from "../../../styles/Test.module.css";
+import { useRouter } from "next/router";
+
 export default function SingleCorrectTest({ exam }) {
   const [responses, setResponses] = useState([]);
   const [testOngoing, setTestOngoing] = useState(true);
@@ -19,6 +21,13 @@ export default function SingleCorrectTest({ exam }) {
     });
     console.log(responses);
   };
+  const clearResponse = (qnumber) => {
+    setResponses((responses) => {
+      let arr = [...responses];
+      arr[qnumber] = undefined;
+      return arr;
+    });
+  };
 
   const getExamMetrics = () => {
     let marks = 0;
@@ -28,7 +37,7 @@ export default function SingleCorrectTest({ exam }) {
       if (answer && answer.isCorrect) {
         marks += exam.marks;
         correct++;
-      } else {
+      } else if (answer) {
         marks += exam.negMarks;
         wrong++;
       }
@@ -62,6 +71,7 @@ export default function SingleCorrectTest({ exam }) {
             qnumber={i}
             question={question}
             saveResponse={saveResponse}
+            clearResponse={clearResponse}
             response={responses[i]}
           />
         );
@@ -79,10 +89,9 @@ export default function SingleCorrectTest({ exam }) {
     <ReportCard submission={submission} />
   );
 }
-export async function getStaticProps() {
-  const res = await fetch(
-    "http://192.168.0.147:8080/api/v1/exam/60f3c5301e29753898cfff52"
-  );
+export async function getServerSideProps(context) {
+  const { id } = context.params;
+  const res = await fetch("http://192.168.0.147:8080/api/v1/exam/" + id);
   const exam = await res.json();
 
   return {

@@ -1,6 +1,7 @@
 import styles from "../../styles/AddTest.module.css";
 import { useState } from "react";
 import QuestionInput from "../../components/QuestionInput";
+import { useRouter } from "next/router";
 export default function AddTest({}) {
   const [nameOfTest, setNameOfTest] = useState("");
   const [marks, setMarks] = useState(0);
@@ -10,7 +11,7 @@ export default function AddTest({}) {
   const [subject, setSubject] = useState("");
   const [test_setter, setTestSetter] = useState("");
   const [pattern, setPattern] = useState("");
-
+  const router = useRouter();
   const submitExamData = () => {
     const exam = createExamData();
     const body = {
@@ -26,7 +27,8 @@ export default function AddTest({}) {
       body: JSON.stringify({ exam: exam }),
     })
       .then((data) => {
-        console.log(data);
+        alert("Successfully uploaded the Exam");
+        router.push("/test");
       })
       .catch((err) => {
         console.error(err);
